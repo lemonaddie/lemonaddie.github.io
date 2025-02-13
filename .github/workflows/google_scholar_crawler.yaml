@@ -5,7 +5,6 @@ on:
  schedule:
   - cron: '0 8 * * *'
 
-  
   # - cron: '* * * * *'
 
 permissions:
@@ -27,7 +26,7 @@ jobs:
         cd ./results
         git init
         git config --local user.name "${GITHUB_ACTOR}"
-        export remote_repo="https://GITHUBACTOR:{GITHUB_ACTOR}:{{ secrets.GITHUB_TOKEN }}@github.com/${GITHUB_REPOSITORY}.git"
+        export remote_repo="https://GITHUBACTOR:{GITHUB_ACTOR}:{{ secrets.GITHUB_TOKEN }}@github.com/${GITHUB_REPOSITORY}"
         git add *.json
         git commit -m "Updated Citation Data"
         git push "${remote_repo}" HEAD:google-scholar-stats --force
