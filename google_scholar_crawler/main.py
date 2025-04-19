@@ -1,7 +1,6 @@
-print(1)
-# from scholarly import scholarly
-# import jsonpickle
-# print(2)
+from scholarly import scholarly
+import jsonpickle
+print(2)
 # import json
 # from datetime import datetime
 # import os
